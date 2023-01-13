@@ -54,7 +54,7 @@ def load_filename(task,objects):
             # those have half the resolution
             dir_half = np.array(['Suturing_S07_T01', 'Suturing_S07_T02', 'Suturing_S07_T03','Suturing_S07_T04', 'Suturing_S07_T05', 'Suturing_S08_T01'])
             # those the test set
-            dir_test = np.array(['Suturing_03_T01', 'Suturing_S02_T04','Suturing_S02_T01', 'Suturing_S03_T04','Suturing_S03_T05','Suturing_S05_T03'])
+            dir_test = np.array([ 'Suturing_S02_T04','Suturing_S02_T01', 'Suturing_S03_T04','Suturing_S03_T05','Suturing_S05_T03'])
             dir_train = list(set(list(map(lambda x:x.split('/')[-1],train_file)))-set(dir_half)-set(dir_test))
 
         elif ta=='Needle_Passing':
