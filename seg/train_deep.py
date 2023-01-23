@@ -36,13 +36,7 @@ def adjust_learning_rate(optimizer, epoch):
     lr = lra* (0.8 ** (epoch // 30))
     for param_group in optimizer.param_groups:
         param_group['lr'] = lr
-def load_filename_miccai(objects):
-    mask_dir = glob.glob('/home/student/Documents/Zoey/segmentation/miccai/*/seq_*/mask_output_{}'.format(objects)+"/*")
-    return mask_dir,None
 
-def load_filename_miccai22(objects):
-    mask_dir = glob.glob('/home/student/Documents/Zoey/segmentation/miccai2022/video_files/*/*/mask_output_{}'.format(objects)+"/*")
-    return mask_dir,None
 
 def load_filename(task,objects):
     from itertools import chain
